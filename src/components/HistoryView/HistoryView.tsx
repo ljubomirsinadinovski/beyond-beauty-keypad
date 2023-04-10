@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, HistoryEntry, Title } from './HistoryView.style';
 import { useKeypadHistory } from '../../context/KeypadHistoryContext';
 

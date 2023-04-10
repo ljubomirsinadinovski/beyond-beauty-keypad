@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import KeypadButton from '../KeypadButton/KeypadButton';
 import { KeypadGridDefinition } from '../../constants/KeypadGridDefinition';
 import { Container, KeypadRow } from './KeypadGrid.style';

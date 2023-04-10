@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, MainLabel, SecondLabel } from './KeypadButton.style';
 import { KeypadInterface } from '../../interfaces/KeypadInterface';
 
