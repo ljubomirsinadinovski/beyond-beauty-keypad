@@ -1,7 +1,7 @@
 import { Container, MainLabel, SecondLabel } from './KeypadButton.style';
 import { KeypadInterface } from '../../interfaces/KeypadInterface';
 import { useKeypadHistory } from '../../context/KeypadHistoryContext';
-import { useEffect, useRef, useState } from 'react';
+import { MutableRefObject, useEffect, useRef, useState } from 'react';
 import { KeypadGridDefinition } from '../../constants/KeypadGridDefinition';
 
 interface KeypadButtonProps extends KeypadInterface {
@@ -18,6 +18,7 @@ const KeypadButton = ({
   const historyContext = useKeypadHistory();
   const [clickCounter, setClickCounter] = useState(1); // default is 1 because always invoked when click occured
   const timerRef = useRef<any>(null);
+  const buttonRef = useRef() as MutableRefObject<HTMLButtonElement>;
 
   useEffect(() => {
     // Clear the interval when the component unmounts
@@ -62,13 +63,15 @@ const KeypadButton = ({
 
       setClickCounter(1);
       const entry = `- ${Date().toString()}  User clicks on ${btnLabel}, the coordinates are [${
-                    rowIndex + 1}, ${columnIndex + 1}]`;
+        rowIndex + 1
+      }, ${columnIndex + 1}]`;
       historyContext.addEntry(entry);
+      buttonRef.current.blur();
     }, 1000);
   };
 
   return (
-    <Container onClick={() => clickHandler()}>
+    <Container onClick={() => clickHandler()} ref={buttonRef}>
       {secondaryLabel && <SecondLabel>{secondaryLabel}</SecondLabel>}
       <MainLabel>{mainLabel}</MainLabel>
     </Container>

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,21 +22,23 @@ export const Container = styled.div`
     -1.4px 11.5px 8.7px -3.6px hsl(0deg 56% 25% / 0.33),
     -2.4px 19.7px 14.9px -4.3px hsl(0deg 56% 25% / 0.22),
     -3.8px 31.1px 23.5px -5px hsl(0deg 56% 25% / 0.11);
+  cursor: pointer;
 
-  &:hover {
-    filter: brightness(120%);
-    cursor: pointer;
+  @media (hover: hover) {
+    &:hover {
+      filter: brightness(120%);
+    }
   }
-
-  user-select: none;
 `;
 
 export const MainLabel = styled.p`
   color: black;
   font-size: 2.75rem;
+  user-select: none;
 `;
 
 export const SecondLabel = styled.p`
   color: black;
   font-size: 1.25rem;
+  user-select: none;
 `;

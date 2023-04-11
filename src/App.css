@@ -96,3 +96,11 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
