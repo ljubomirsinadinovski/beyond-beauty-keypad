@@ -17,5 +17,6 @@ Features of the keypad:
 - Mobile friendly
 - Access to secondary labels if clicked multiple times fast (same as old phones - timeout is 1 second)
 - History which label (character) was chosen with timestamp and coordinatess preserved in local storage
+- Reset history button
 
 ![](https://github.com/ljubomirsinadinovski/beyond-beauty-keypad/blob/main/example.png)
