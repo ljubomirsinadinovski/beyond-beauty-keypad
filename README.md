@@ -19,4 +19,4 @@ Features of the keypad:
 - History which label (character) was chosen with timestamp and coordinatess preserved in local storage
 - Reset history button
 
-![](https://github.com/ljubomirsinadinovski/beyond-beauty-keypad/blob/main/example.png)
+![](https://github.com/ljubomirsinadinovski/beyond-beauty-keypad/blob/main/example2.png)
